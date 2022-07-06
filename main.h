@@ -1,10 +1,11 @@
-#ifndef D3263335_D6A4_455F_A73E_31A31C7A60AC
-#define D3263335_D6A4_455F_A73E_31A31C7A60AC
-#ifndef DF2290E2_9D31_4232_ACF9_7B4C8BA04190
-#define DF2290E2_9D31_4232_ACF9_7B4C8BA04190
+#ifndef HEADER_PRINTF
+#define HEADER_PRINTF
+
+#include <stdarg.h> // va_arg, va_list, va_end
+#include <stdlib.h> // malloc
+#include <unistd.h> // write
 
 
-#endif /* DF2290E2_9D31_4232_ACF9_7B4C8BA04190 */
 
 
-#endif /* D3263335_D6A4_455F_A73E_31A31C7A60AC */
+#endif
