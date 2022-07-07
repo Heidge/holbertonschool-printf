@@ -5,7 +5,7 @@
  *
  * @str: string random
  */
-int _puts(char *str)
+int _put_s(char *str)
 {
 	int c;
 

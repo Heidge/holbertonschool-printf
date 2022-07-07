@@ -20,6 +20,12 @@ int _printf(const char *format, ...)
 			str_f += _print_char(args);
 			index_f++;
 		}
+
+				else if (format[index_f + 1] == 's')
+		{
+			str_f += _print_char(args);
+			index_f++;
+		}
 	}
 	va_end (args);
 	return (str_f);
