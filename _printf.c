@@ -4,7 +4,7 @@ int _printf(const char *format, ...)
 
 {
 	int index_f;
-	int str_f;
+	int str_f = 0;
 
 	va_list (args);
 	va_start (args, format);
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			index_f++;
 		}
 
-				else if (format[index_f + 1] == 's')
+		else if (format[index_f + 1] == 's')
 		{
 			str_f += _print_str(args);
 			index_f++;
@@ -29,5 +29,4 @@ int _printf(const char *format, ...)
 	}
 	va_end (args);
 	return (str_f);
-
 }
