@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 
 				else if (format[index_f + 1] == 's')
 		{
-			str_f += _print_char(args);
+			str_f += _print_str(args);
 			index_f++;
 		}
 	}

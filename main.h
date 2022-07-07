@@ -4,7 +4,7 @@
 #include <stdarg.h> /* va_arg, va_list, va_end,*/
 #include <stdlib.h> /* malloc */
 #include <unistd.h> /* write */
-
+#include <stdio.h> 
 
 int _printf(const char *format, ...); /* fonction principale */
 int _print_char(va_list args); /* fonction pour print %c */
