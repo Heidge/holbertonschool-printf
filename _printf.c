@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		else if (format[index_f + 1] == 'c')
 		{
 			str_f += _print_char(args);
+			index_f++;
 		}
 	}
 	va_end (args);
