@@ -7,9 +7,9 @@
  */
 int _put_s(char *str)
 {
-	int c, str_s;
+	int c, str_s = 0;
 
 	for (c = 0; str[c] != '\0'; c++)
-		str_s = _put_char(str[c]);
+		str_s += _put_char(str[c]);
 	return(str_s);
 }
