@@ -1,10 +1,8 @@
-#include "main.h" /* include all necessary libraries. */
+#include "main.h"
 
 int _printf(const char *format, ...)
 
 {
-
-
 	int index_f;
 	int str_f;
 
@@ -17,7 +15,6 @@ int _printf(const char *format, ...)
 		{
 			str_f += _put_char (format[index_f]);
 		}
-
 		else if (format[index_f + 1] == 'c')
 		{
 			str_f += _print_char(args);
