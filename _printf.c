@@ -14,18 +14,22 @@ int _printf(const char *format, ...)
 		if (format[index_f] != '%')
 		{
 			str_f += _put_char (format[index_f]);
+
 		}
+
+		else if (format[index_f + 1] == 's')
+		{
+			str_f += _print_str(args);
+			index_f++;
+		}
+		
 		else if (format[index_f + 1] == 'c')
 		{
 			str_f += _print_char(args);
 			index_f++;
 		}
 
-				else if (format[index_f + 1] == 's')
-		{
-			str_f += _print_str(args);
-			index_f++;
-		}
+
 	}
 	va_end (args);
 	return (str_f);
