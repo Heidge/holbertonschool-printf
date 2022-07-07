@@ -5,6 +5,7 @@
 #include <stdlib.h> // malloc
 #include <unistd.h> // write
 
+int _printf(const char *format, ...); // prototype 
 
 
 
