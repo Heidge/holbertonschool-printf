@@ -18,7 +18,7 @@ int _print_number(); /* print un entier --> dans _print_int et _print_decimal */
 typedef struct types
 {
 	char *choice;
-	void (*fonction)(va_list args);
+	int (*fonction)(va_list args);
 }type_t;
 
 

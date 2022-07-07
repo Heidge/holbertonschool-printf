@@ -5,7 +5,7 @@ int _printf(const char *format, ...)
 {
 	type_t array[] =  /* Structure of format */
 	{
-		{"c",_print_char},
+		{"%c",_print_char},
 	};
 
 
@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list (args);
 	va_start (args, format);
 
-	for (index_f = 0; format[index_f] != '\0', index_f++);
+	for (index_f = 0; format[index_f] != '\0'; index_f++);
 
 		if (format[index_f] != '%')
 		{
@@ -28,6 +28,5 @@ int _printf(const char *format, ...)
 		}
 
 		va_end (args);
-		printf ("\n");
 
 }
