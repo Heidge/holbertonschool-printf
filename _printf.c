@@ -21,10 +21,15 @@ int _printf(const char *format, ...)
 			index_f++;
 		}
 
-				else if (format[index_f + 1] == 's')
+		else if (format[index_f + 1] == 's')
 		{
 			str_f += _print_str(args);
 			index_f++;
+		}
+
+		else if (format[index_f +1] == '%')
+		{
+			str_f += _put_char (format[index_f]);
 		}
 	}
 	va_end (args);
