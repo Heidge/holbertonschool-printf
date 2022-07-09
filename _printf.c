@@ -1,32 +1,32 @@
 #include "main.h"
 int _printf(const char *format, ...)
 {
-    int index_f;
-    int str_f = 0;
+    int index_f, str_f = 0;
+    int (*ptr)(va_list);
     va_list (args);
     va_start (args, format);
+    if(format == NULL)
+    return(0);
     for(index_f = 0; format[index_f] != '\0'; index_f++)
     {
-        if(format[index_f] != '%')
+        if (format[index_f] != '%')
         {
-            str_f += _put_char (format[index_f]);
+            str_f += _put_char(format[index_f]);
         }
-        else if(format[index_f + 1] == 'c')
+        else
         {
-            str_f += _print_char(args);
+            ptr = fnc(format[index_f + 1]);
             index_f++;
+            if (ptr == NULL) /* ptr n'a trouvé aucun format correspondant */
+            {
+                _put_char('%');
+                _put_char(format[index_f]);
+            }
+            else
+            {
+                str_f += ptr(args);
+            }
         }
-        else if(format[index_f + 1] == 's')
-        {
-            str_f += _print_str(args);
-            index_f++;
-        }
-        else if(format[index_f + 1] == '%')
-        {
-            str_f += _put_char('%');
-            index_f++;
-        }
-        
     }
     va_end (args);
     return (str_f);
