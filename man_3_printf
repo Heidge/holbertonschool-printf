@@ -1,0 +1,68 @@
+.\" Manpage for _printf
+.TH _printf 3 "Juillet 2021" "1.0" "_printf man page"
+.SH NAME
+_printf \- formatted output conversion
+.SH SYNOPSIS
+\fB #include <stdarg.h>
+\fB #include <stdlib.h>
+\fB #include <unistd.h>
+\fB #include <stdio.h>
+
+\fB int _printf(const char *format, ...);
+.SH DESCRITION
+
+.SS Definition:
+The function _printf is a variadic function that produces a string according to a and prints it to the standard output, much like the C standard library function printf. It can receive a variable number of arguments.
+
+.SS Format string:
+The format string is a string, beginning and ending with double quotes. This string is composed of some ordinary characters and conversion specifications. Each conversion specifier uses a percent sign with a specifier.
+
+.SS Variable arguments:
+After the format string, the variable arguments must correspond respectively with the conversion specifier in the format string.
+
+.SS Conversion specifiers:
+A conversion specifiers is a combination of a percent sign and a character that specifies the type of conversion to be applied. The specifiers and their meangings are:
+
+.TS
+allbox tab(|);
+c s s
+c s c
+c s c
+c s c.
+For the first argument
+%c | print a single character
+%s | print a string of characters
+%% | print a single percent sign (%)
+%d | print a decimal (base 10) number
+%i | print an integer in base 10
+.TE
+
+.SH RETURN VALUE
+If successful return, _printf function return the number of characters printed (excluding the null byte used to end output to strings).
+If an error appened, _printf function return a negative value (-1).
+
+.SH EXAMPLES
+
+_printf("%c", 'H')
+\fB Result : H \fP
+
+_printf("%s\n", "I am a string !")
+\fB Result : I \fP am a string !
+
+_printf("%%")
+\fB Result : % \fP
+
+_printf("%d",762534)
+\fB Result : 762534 \fP
+
+_printf("%i", 39)
+\fB Result : 39 \fP
+
+
+.SH AUTHORS
+
+Axel Goré & Romain Brogniez
+
+.SH COPYRIGHT
+
+@HolbertonSchool
