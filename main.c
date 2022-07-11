@@ -38,10 +38,12 @@ int main(void)
     printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    len = _printf("Unknown:[%r]\n");
-    len2 = printf("Unknown:[%r]\n");
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
+    len = _printf("%");
+    len2 = printf("%");
     printf("len =%d", len);
-    printf("len2 = %d", len2);
+    printf("len2 =%d", len2);
 
     return (0);
 }
