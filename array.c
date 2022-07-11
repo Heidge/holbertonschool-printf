@@ -4,6 +4,7 @@ int (*fnc (char j))(va_list)
     type_t array[] = {
     {"c",_print_char},
     {"s",_print_str},
+    {"%",_print_percent},
     {NULL, NULL},
     };
     int i;

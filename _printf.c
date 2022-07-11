@@ -1,12 +1,12 @@
 #include "main.h"
 int _printf(const char *format, ...)
 {
-    int index_f, str_f = 0;
+    int index_f = 0, str_f = 0;
     int (*ptr)(va_list);
     va_list (args);
     va_start (args, format);
     if(format == NULL)
-    return(0);
+    return(-1);
     for(index_f = 0; format[index_f] != '\0'; index_f++)
     {
         if (format[index_f] != '%')
