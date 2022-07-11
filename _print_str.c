@@ -1,8 +1,14 @@
 #include "main.h"
-
+/**
+*_print_str - function for format "s"
+*@args: format
+*Return: arg_s
+*/
 int _print_str(va_list args)
 {
-	int arg_s;
-	arg_s = _put_s(va_arg(args, char *));
-	return(arg_s);
+	char *p = va_arg(args, char*);
+
+	if (!p)
+		p = "(null)";
+	return (_put_s(p));
 }

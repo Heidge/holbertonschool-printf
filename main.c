@@ -32,6 +32,8 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
     _printf("Percent:[%%]\n");
@@ -40,8 +42,8 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-    len = _printf("%");
-    len2 = printf("%");
+    _printf("%");
+    printf("%");
     printf("len =%d", len);
     printf("len2 =%d", len2);
 
