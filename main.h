@@ -4,19 +4,36 @@
 #include <stdlib.h> /* malloc */
 #include <unistd.h> /* write */
 #include <stdio.h>
-int _printf(const char *format, ...); /* fonction principale */
-int _print_char(va_list args); /* fonction pour print %c */
-int _print_str(va_list args); /* fonction pour print %s */
-int _print_percent(va_list args); /* fonction pour print % */
-int _print_decimal(va_list args); /* fonction pour print %d */
-int _print_int(va_list args); /* fonction pour print %i */
-int _put_char(char c); /* print un caractère --> dans _print_char */
-int _put_s(char *str); /* print une string --> dans _print_str */
-int _print_number(); /* print un entier --> dans _print_int et _print_decimal */
-int (*fnc (char j))(va_list);
+/**
+ * _print_char - function for format "c"
+ * _print_str - function for format "s"
+ * _print_percent - function for format "%"
+ * _print_int - function for format "i" or "d"
+ * _put_char - putchar function
+ * _put_s - puts function
+ * @format: - string with format specifier inside
+ * Return: length of string or char
+ */
+
+int _printf(const char *format, ...);
+int _print_char(va_list args);
+int _print_str(va_list args);
+int _print_percent(va_list args);
+int _print_int(va_list args);
+int _put_char(char c);
+int _put_s(char *str);
+int (*fnc(char j))(va_list);
+
+/**
+ * struct types - array
+ * @choice: format char specifier
+ * @f: function matching with format specifier
+ */
+
 typedef struct types
 {
-    char *choice;
-    int (*f)(va_list args);
-}type_t;
+	char *choice;
+	int (*f)(va_list args);
+} type_t;
+
 #endif
