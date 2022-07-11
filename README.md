@@ -25,7 +25,7 @@ along with regular characters
 | `%%` | print a percent sign (% also works) |
 | `%d` | print a decimal (base 10) number |
 | `%i` | print an integer in base 10 |
-| `%b` | print a number or a character as binary
+
 
 ## How to use
 
@@ -33,9 +33,8 @@ along with regular characters
 * `_putchar.c` function that gets a char parameter with the stdout, the standard output stream
 * `_print_int` function
 * `_print_number` function
-* `_print_purcent` function
-* `_print_str` function 
-
+* `_print_percent` function for print only %
+* `_print_str` function for print strings
 
 ###
 
