@@ -25,7 +25,29 @@ along with regular characters
 | `%%` | print a percent sign (% also works) |
 | `%d` | print a decimal (base 10) number |
 | `%i` | print an integer in base 10 |
-| `%b` | print a number or a character as binary 
+| `%b` | print a number or a character as binary
+
+## How to use
+
+* `_printf.c` function that passing a formatted string with any format specifiers
+* `_putchar.c` function that gets a char parameter with the stdout, the standard output stream
+* `_print_int` function
+* `_print_number` function
+* `_print_purcent` function
+* `_print_str` function 
+
+
+###
+
+
+## Examples outputs
+
+* `_printf("%c", 'H');` => __prints the character "H"__
+* `_printf("%s\n", "I am a string !");` => __prints the string "I am a string !" followed by a new line__
+* `_printf("%%");` => __prints the character "%"__
+* `_printf("%d",762534);` => __prints the decimal "762534"__
+* `_printf("%i", 39);` => __prints the integer "39"__
+
 
 # Tasks
 
