@@ -19,8 +19,8 @@ int _printf(const char *format, ...)
             index_f++;
             if (ptr == NULL) /* ptr n'a trouvé aucun format correspondant */
             {
-                _put_char('%');
-                _put_char(format[index_f]);
+                str_f += _put_char(format[index_f - 1]);
+                str_f += _put_char(format[index_f]);
             }
             else
             {
