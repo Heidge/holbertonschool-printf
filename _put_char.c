@@ -1,7 +1,7 @@
 #include "main.h" /* include all necessaries libraries */
 
 /**
- * _putchar - writes the character
+ * _put_char - writes the character
  * @c: The character to print
  *
  * Return: On success 1.
