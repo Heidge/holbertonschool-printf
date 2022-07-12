@@ -28,6 +28,9 @@ int _print_int(va_list args)
 {
 	int sum = 0, number, n = va_arg(args, int);
 
+	if (n == 0)
+	return (_put_char('0'));
+
 	if (n < 0)
 	sum = 1;
 	for (number = n; number != 0; sum++)
