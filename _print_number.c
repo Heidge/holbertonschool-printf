@@ -30,7 +30,7 @@ int _print_int(va_list args)
 
 	if (n < 0)
 	sum = 1;
-	for (number = n; number > 0; sum++)
+	for (number = n; number != 0; sum++)
 	{
 		number /= 10;
 	}
