@@ -2,23 +2,20 @@
 /**
  * _print_number - print an int
  * @n: int
- * Return: sum
  */
 
-int _print_number(int n)
+void _print_number(int n)
 {
-int  sum = 0;
 
 if (n == 0)
-return (0);
+return;
 if (n < 0)
 {
-	sum = _put_char('-');
+	_put_char('-');
 	n = n * (-1);
 }
 _print_number(n / 10);
 _put_char((n % 10) + '0');
-return (sum);
 }
 
 /**
