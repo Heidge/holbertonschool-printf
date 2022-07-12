@@ -35,5 +35,5 @@ int _print_int(va_list args)
 		number /= 10;
 	}
 	_print_number(n);
-	return (sum);
+	return (sum + 1);
 }
