@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *_printf - print a char, string, int, dec ...
-*@format: format selected
+*@format: string with format specifier inside
 *Return: length of the string
 */
 int _printf(const char *format, ...)
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			ptr = fnc(format[index_f + 1]);
+			ptr = match_format(format[index_f + 1]);
 			index_f++;
 			if (ptr == NULL) /* ptr n'a trouvé aucun format correspondant */
 			{
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				str_f += ptr(args);
+				str_f += ptr(args); /* match_format(format[index_f + 1])(args)     */
 			}
 		}
 	}

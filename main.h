@@ -19,10 +19,10 @@ int _printf(const char *format, ...);
 int _print_char(va_list args);
 int _print_str(va_list args);
 int _print_percent(va_list args);
-int _print_int(va_list args);
+void print_number(int n);
 int _put_char(char c);
 int _put_s(char *str);
-int (*fnc(char j))(va_list);
+int (*match_format(char j))(va_list);
 
 /**
  * struct types - array
